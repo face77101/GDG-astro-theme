@@ -1,4 +1,6 @@
 ---
+import { Icon } from 'astro-icon/components';
+
 interface Props {
     prevTitle: string;
     nextTitle: string;
@@ -27,9 +29,7 @@ const {
     <a href={prevUrl} class="rounded-l-[50px] w-full flex items-center justify-start cursor-pointer hover:bg-[#999292] duration-300 transition group px-6 gap-4">
         
         <!-- left arrow -->
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-12 stroke-[#423f3f] group-hover:stroke-white transition">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
-        </svg>
+        <Icon name="mingcute:left-line" class="size-12 filter group-hover:drop-shadow-[0_0_2px_rgba(255,255,255,1)] transition"/>
 
         <!-- prevPicture -->
         {prevPicture && (
@@ -43,7 +43,7 @@ const {
             <span class="text-[12px] text-[#423f3f] uppercase font-bold">
                 PREV
             </span>
-            <span class="text-[24px] font-bold text-black leading-tight group-hover:text-white">
+            <span class="text-[24px] font-bold text-black leading-tight group-hover:text-white transition">
                 {prevTitle}
             </span>
         </div>
@@ -60,7 +60,7 @@ const {
             <span class="text-[12px] text-[#423f3f] uppercase font-bold">
                 Next
             </span>
-            <span class="text-[24px] font-bold text-black leading-tight group-hover:text-white">
+            <span class="text-[24px] font-bold text-black leading-tight group-hover:text-white transition">
                 {nextTitle}
             </span>
         </div>
@@ -73,9 +73,7 @@ const {
         )}
 
         <!-- nextText -->
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-12 stroke-[#423f3f] group-hover:stroke-white transition">
-            <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-        </svg>
+        <Icon name="mingcute:right-line" class="size-12 filter group-hover:drop-shadow-[0_0_2px_rgba(255,255,255,1)] transition"/>
         
     </a>
 </div>
