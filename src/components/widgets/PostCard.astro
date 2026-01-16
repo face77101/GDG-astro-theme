@@ -1,19 +1,15 @@
 ---
-import type { ImageMetadata } from 'astro';
 import { Image } from 'astro:assets';
+import type { PostData } from '../types/PostData';
 
 interface Props {
-    title: string;     
-    date: string;        
-    image?: ImageMetadata;        
-    url: string;
+    post: PostData;
 }
 const { 
-    title, 
-    date, 
-    image,
-    url
+    post
 } = Astro.props;
+
+const { title, image, url, date } = post;
 ---
 <a href={url} class={`group relative block h-53 overflow-hidden rounded-[30px]`}>
     {image && <Image 
